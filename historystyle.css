@@ -1,0 +1,106 @@
+body {
+    background-color: #fff0f3;
+    font-family: sans-serif;
+}
+
+.history-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header-section h1 {
+    color: rgb(238, 71, 99);
+    margin-bottom: 10px;
+}
+
+.add-btn {
+    background-color: rgb(238, 71, 99);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.history-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: transform 0.2s ease;
+    border-left: 5px solid transparent;
+}
+
+.history-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+
+/* Color coding the borders based on mood */
+.history-card.happy { border-left-color: #f39c12; }
+.history-card.sad { border-left-color: #3498db; }
+.history-card.angry { border-left-color: #e74c3c; }
+.history-card.neutral { border-left-color: #95a5a6; }
+.history-card.excited { border-left-color: #9b59b6; }
+
+.card-content {
+    flex-grow: 1;
+}
+
+.card-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.card-mood-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+/* Badge Colors */
+.card-mood-badge.happy { background-color: #f39c12; }
+.card-mood-badge.sad { background-color: #3498db; }
+.card-mood-badge.angry { background-color: #e74c3c; }
+.card-mood-badge.neutral { background-color: #95a5a6; }
+.card-mood-badge.excited { background-color: #9b59b6; }
+
+.card-journal {
+    color: #333;
+    line-height: 1.5;
+    white-space: pre-wrap; /* Preserves line breaks from the textarea */
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 15px;
+    opacity: 0.6;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}

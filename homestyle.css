@@ -1,0 +1,39 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(238, 71, 99);
+    /* Removed "float: left" - Flexbox does this for you! */
+}
+
+/* Added this wrapper to align links nicely */
+.navbar .menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 8px 8px;
+    margin-left: 5px; /* Fixed "margin: left" error */
+    transition: all 0.3s ease; /* Added for smooth animation */
+}
+
+.navbar .menu a:hover {
+    background-color: rgb(238, 71, 99);
+    color: white;
+    border-radius: 4px;
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}

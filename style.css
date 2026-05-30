@@ -1,0 +1,155 @@
+/* ===============================
+   MONTH HEADER
+================================ */
+.month {
+    text-align: center;
+    padding: 20px 25px;
+    background-color: rgb(238, 71, 99);
+    color: white;
+    font-size: 30px;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Navigation Buttons */
+.nav-a {
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(22,5,5,0.1),
+                inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.nav-a:hover {
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+.prev { float: left; }
+.next { float: right; }
+
+/* ===============================
+   WEEKDAYS
+================================ */
+.weekdays {
+    background: white;
+    padding: 10px 0;
+}
+
+.weekdays ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.weekdays li {
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+}
+
+/* ===============================
+   CALENDAR GRID
+================================ */
+.days {
+    padding: 20px 10px;
+    background: rgb(248, 230, 233);
+}
+
+.days ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* ===============================
+   DAY CARD (SINGLE SOURCE OF TRUTH)
+================================ */
+.days li {
+    background: white;
+    border-radius: 12px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.days li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Day number */
+.day-number {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+}
+
+/* Mood emoji */
+.mood-icon {
+    font-size: 32px;
+    line-height: 1;
+}
+
+/* Today */
+.days li.today {
+    outline: 3px solid rgb(238, 71, 99);
+}
+
+/* ===============================
+   MOOD COLORS
+================================ */
+.days li.happy   { background: #f39c12; color: white; }
+.days li.sad     { background: #3498db; color: white; }
+.days li.angry   { background: #e74c3c; color: white; }
+.days li.neutral { background: #95a5a6; color: white; }
+.days li.excited { background: #9b59b6; color: white; }
+
+.days li.happy .day-number,
+.days li.sad .day-number,
+.days li.angry .day-number,
+.days li.neutral .day-number,
+.days li.excited .day-number {
+    color: rgba(255,255,255,0.9);
+}
+
+/* ===============================
+   FUTURE DATES
+================================ */
+.days li.future {
+    background: #e5e5e5;
+    color: #aaa;
+    pointer-events: none;
+    box-shadow: none;
+}

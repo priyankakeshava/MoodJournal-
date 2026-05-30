@@ -1,0 +1,38 @@
+
+.divbody {
+    background: linear-gradient(180deg, #fff0f3 0%, #ffffff 100%);
+    text-align: center;
+    width: 100%;
+    min-height: 90vh; /* Changed to min-height so content isn't cut off on small screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif; /* Added font so it looks modern */
+}
+
+/* --- HEADING STYLES --- */
+.divbody h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333; /* Added color so text isn't pitch black */
+}
+
+/* --- BUTTON STYLES --- */
+button {
+    background-color: rgb(238, 71, 99);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: bold; /* Makes the text pop */
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Makes the hover effect smooth */
+    box-shadow: 0 4px 6px rgba(238, 71, 99, 0.2); /* Adds a subtle shadow */
+}
+
+button:hover {
+    background-color: rgb(200, 50, 70);
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}

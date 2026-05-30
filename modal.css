@@ -1,0 +1,81 @@
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+.mood {
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.mood:hover {
+    transform: scale(1.1);
+}
+
+/* Specific Colors */
+.happy { background-color: #f39c12; }
+.sad { background-color: #3498db; }
+.angry { background-color: #e74c3c; }
+.neutral { background-color: #95a5a6; }
+.excited { background-color: #9b59b6; }
+
+/* Modal Styling */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 10; 
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+    background-color: #fefefe; 
+    margin: 10% auto; 
+    padding: 25px;
+    border: 1px solid #888; 
+    width: 90%; 
+    max-width: 450px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover { color: black; }
+
+/* Form Elements */
+textarea {
+    width: 100%;
+    height: 100px;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-family: sans-serif;
+}
+.save-btn {
+    background-color: rgb(238, 71, 99);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.save-btn:hover {
+    background-color: rgb(200, 50, 70);
+}
